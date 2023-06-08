@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1033</width>
-    <height>622</height>
+    <width>1010</width>
+    <height>435</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,11 +19,11 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>621</width>
-      <height>351</height>
+      <width>1026</width>
+      <height>441</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="MainLayout" stretch="0,0">
+    <layout class="QHBoxLayout" name="MainLayout" stretch="0,1">
      <item>
       <layout class="QVBoxLayout" name="leftLayout">
        <property name="sizeConstraint">
@@ -52,12 +52,16 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="ipEdit"/>
+        <widget class="QLineEdit" name="ipEdit">
+         <property name="placeholderText">
+          <string>1.1.1.1</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="connectButton">
          <property name="text">
-          <string>PushButton</string>
+          <string>Connect</string>
          </property>
         </widget>
        </item>
@@ -122,6 +126,9 @@
            <property name="maximum">
             <number>100000</number>
            </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
            <property name="value">
             <number>1000</number>
            </property>
@@ -134,6 +141,226 @@
          <property name="text">
           <string>Движение зонда</string>
          </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QDoubleSpinBox" name="probeXDSBox">
+           <property name="prefix">
+            <string>X: </string>
+           </property>
+           <property name="suffix">
+            <string> мкм</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="probeYDSBox">
+           <property name="prefix">
+            <string>Y: </string>
+           </property>
+           <property name="suffix">
+            <string> мкм</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="probeZDSBox">
+           <property name="prefix">
+            <string>Z: </string>
+           </property>
+           <property name="suffix">
+            <string> мкм</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="1" column="2">
+           <widget class="QPushButton" name="probeYDownButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>downarrow.png</normaloff>downarrow.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QPushButton" name="probeXUpButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>rightarrow.png</normaloff>rightarrow.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="probeYUpButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>uparrow.png</normaloff>uparrow.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QPushButton" name="probeZUpButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>zuparrow.png</normaloff>zuparrow.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="probeXDownButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>leftarrow.png</normaloff>leftarrow.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QPushButton" name="probeZDownButton">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>zdownarrow.png</normaloff>zdownarrow.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -153,8 +380,14 @@
      </item>
      <item>
       <widget class="QTabWidget" name="mainTabs">
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>300</height>
+        </size>
+       </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="AFMTab">
         <attribute name="title">
@@ -164,14 +397,23 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>19</y>
-           <width>261</width>
-           <height>241</height>
+           <y>30</y>
+           <width>662</width>
+           <height>271</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <layout class="QHBoxLayout" name="AFMlayout" stretch="0,1">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
           <item>
            <layout class="QVBoxLayout" name="AFMVerticalLayout">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
             <item>
              <layout class="QHBoxLayout" name="AFMParamLayout">
               <item>
@@ -182,7 +424,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QDoubleSpinBox" name="AFMapprValueDSBox">
+               <widget class="QDoubleSpinBox" name="AFMapprDSBox">
                 <property name="suffix">
                  <string> В</string>
                 </property>
@@ -207,7 +449,7 @@
                  <string>Подвод</string>
                 </property>
                 <property name="checkable">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                </widget>
               </item>
@@ -217,7 +459,7 @@
                  <string>Сканирование</string>
                 </property>
                 <property name="checkable">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                </widget>
               </item>
@@ -231,27 +473,24 @@
              </layout>
             </item>
             <item>
-             <widget class="QGroupBox" name="feedbackGroupBox">
-              <property name="title">
-               <string>Обратная связь</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_2">
+             <widget class="QWidget" name="widget" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout_3">
                <item>
-                <widget class="QRadioButton" name="fb1RadioButton">
+                <widget class="QCheckBox" name="fb1CheckBox">
                  <property name="text">
                   <string>Обратная связь 1</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QRadioButton" name="fb2RadioButton">
+                <widget class="QCheckBox" name="fb2CheckBox">
                  <property name="text">
                   <string>Обратная связь 2</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QRadioButton" name="fb3RadioButton">
+                <widget class="QCheckBox" name="fb3CheckBox">
                  <property name="text">
                   <string>Обратная связь 3</string>
                  </property>
@@ -275,6 +514,16 @@
             </item>
            </layout>
           </item>
+          <item>
+           <widget class="signalPlot" name="AFMsignalPlot" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>200</height>
+             </size>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </widget>
@@ -287,13 +536,28 @@
           <rect>
            <x>20</x>
            <y>49</y>
-           <width>256</width>
-           <height>231</height>
+           <width>662</width>
+           <height>286</height>
           </rect>
          </property>
-         <layout class="QHBoxLayout" name="flirtLayout">
+         <layout class="QHBoxLayout" name="flirtLayout" stretch="0,1">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMaximumSize</enum>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
           <item>
            <layout class="QVBoxLayout" name="flirtVerticalLayout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <property name="topMargin">
+             <number>30</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <layout class="QGridLayout" name="flirtParamLayout">
               <item row="1" column="0">
@@ -311,7 +575,7 @@
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QDoubleSpinBox" name="flirtHeightValueDSBox">
+               <widget class="QDoubleSpinBox" name="flirtHeightDSBox">
                 <property name="prefix">
                  <string/>
                 </property>
@@ -324,7 +588,7 @@
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QDoubleSpinBox" name="flirtApprValueDSBox">
+               <widget class="QDoubleSpinBox" name="flirtApprDSBox">
                 <property name="suffix">
                  <string> В</string>
                 </property>
@@ -346,7 +610,7 @@
                  <string>Подвод</string>
                 </property>
                 <property name="checkable">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                </widget>
               </item>
@@ -356,7 +620,7 @@
                  <string>Сканирование</string>
                 </property>
                 <property name="checkable">
-                 <bool>true</bool>
+                 <bool>false</bool>
                 </property>
                </widget>
               </item>
@@ -370,9 +634,12 @@
              </layout>
             </item>
             <item>
-             <widget class="QCommandLinkButton" name="commandLinkButton">
+             <widget class="QPushButton" name="flirtShowParams">
               <property name="text">
-               <string>Дополнительные настройки</string>
+               <string>Доп. настройки</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -402,23 +669,33 @@
                <item row="1" column="1">
                 <widget class="QDoubleSpinBox" name="flirtAddParam2DSBox"/>
                </item>
-               <item row="2" column="0">
-                <spacer name="verticalSpacer_3">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
               </layout>
              </widget>
             </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
+          </item>
+          <item>
+           <widget class="signalPlot" name="flortSignalPlot" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>150</height>
+             </size>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -427,6 +704,167 @@
         <attribute name="title">
          <string>Капиллярный режим</string>
         </attribute>
+        <widget class="QWidget" name="horizontalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>638</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="capLayout" stretch="0,1">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <property name="topMargin">
+           <number>15</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="capVerticalLayout">
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QGridLayout" name="capParamLayout">
+              <item row="3" column="1">
+               <widget class="QDoubleSpinBox" name="capSignalDSBox">
+                <property name="suffix">
+                 <string> В</string>
+                </property>
+                <property name="minimum">
+                 <double>0.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.010000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="capApprLabel">
+                <property name="text">
+                 <string>Уровень подвода</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDoubleSpinBox" name="capApprDSBox">
+                <property name="suffix">
+                 <string> %</string>
+                </property>
+                <property name="maximum">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.010000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QDoubleSpinBox" name="capVoltageDSBox">
+                <property name="suffix">
+                 <string> В</string>
+                </property>
+                <property name="singleStep">
+                 <double>0.010000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDoubleSpinBox" name="capHeightDSBox">
+                <property name="suffix">
+                 <string> нм</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="capSignalLabel">
+                <property name="text">
+                 <string>Уровень сигнала </string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="capHeightLabel">
+                <property name="text">
+                 <string>Высота над образцом</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="capVoltageLabel">
+                <property name="text">
+                 <string>Напряжение</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="capButtonsLayout">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="capLiquidApprButton">
+                <property name="text">
+                 <string>Подвод к жидкости</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="capApprButton">
+                <property name="text">
+                 <string>Подвод к образцу</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="capScanButton">
+                <property name="text">
+                 <string>Сканирование</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="capStopButton">
+                <property name="text">
+                 <string>Остановка</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="signalPlot" name="capSignalPlot" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>200</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
      </item>
@@ -438,7 +876,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1033</width>
+     <width>1010</width>
      <height>22</height>
     </rect>
    </property>
@@ -451,7 +889,7 @@
     <property name="title">
      <string>Настройки</string>
     </property>
-    <widget class="QMenu" name="menu_3">
+    <widget class="QMenu" name="menu_font">
      <property name="title">
       <string>Размер шрифта</string>
      </property>
@@ -459,7 +897,8 @@
      <addaction name="actionEnlargedFont"/>
      <addaction name="actionBigFont"/>
     </widget>
-    <addaction name="menu_3"/>
+    <addaction name="menu_font"/>
+    <addaction name="action_2"/>
    </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_edit"/>
@@ -478,7 +917,7 @@
   </widget>
   <action name="actionStandardFont">
    <property name="checkable">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Стандартный</string>
@@ -500,7 +939,20 @@
     <string>Большой</string>
    </property>
   </action>
+  <action name="action_2">
+   <property name="text">
+    <string>изменить</string>
+   </property>
+  </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>signalPlot</class>
+   <extends>QWidget</extends>
+   <header>signalplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
