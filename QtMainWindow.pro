@@ -1,6 +1,6 @@
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++17
 
@@ -9,14 +9,24 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    dialog.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    probecontroller.cpp \
+    qcustomplot.cpp \
+    signalplot.cpp
 
 HEADERS += \
-    mainwindow.h
+    dialog.h \
+    mainwindow.h \
+    probecontroller.h \
+    qcustomplot.h \
+    signalplot.h
 
 FORMS += \
-    mainwindow.ui
+    dialog.ui \
+    mainwindow.ui \
+    probecontroller.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
