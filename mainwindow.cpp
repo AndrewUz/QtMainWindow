@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "signalplot.h"
+#include "dialog.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,6 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     flirtAddParamsShown = false;
     ui->flirtAddParamBox->hide();
+
+    diag = new Dialog(this);
+    connect(ui->probeControllerWidget, &probeController::positionChanged, diag, &Dialog::updatePosition);
 }
 
 MainWindow::~MainWindow()
@@ -48,6 +53,7 @@ void MainWindow::on_flirtShowParams_clicked()
 
 void MainWindow::on_actionStandardFont_triggered()
 {
+
     this->setStyleSheet("QWidget {font-size: 12.5px;}");
     ui->actionBigFont->setChecked(false);
     ui->actionEnlargedFont->setChecked(false);
@@ -85,22 +91,6 @@ void MainWindow::on_resolutionSpinBox_valueChanged(int arg1)
 }
 
 
-void MainWindow::on_probeXDSBox_valueChanged(double arg1)
-{
-    qDebug() << QString("X coordinate set to %1").arg(arg1);
-}
-
-
-void MainWindow::on_probeYDSBox_valueChanged(double arg1)
-{
-     qDebug() << QString("Y coordinate set to %1").arg(arg1);
-}
-
-
-void MainWindow::on_probeZDSBox_valueChanged(double arg1)
-{
-     qDebug() << QString("Z coordinate set to %1").arg(arg1);
-}
 
 
 void MainWindow::on_capHeightDSBox_valueChanged(double arg1)
@@ -208,7 +198,7 @@ void MainWindow::on_AFMStopButton_clicked()
 void MainWindow::on_fb1CheckBox_stateChanged(int arg1)
 {
     if(ui->fb1CheckBox->isChecked())
-        qDebug() << QString("Feedback element 1 is on");
+        qDebug() << QString("Feedback element 1 is on with parameter %1").arg(ui->fb1DSBox->value());
     else
         qDebug() << QString("Feedback element 1 is off");
 }
@@ -217,7 +207,7 @@ void MainWindow::on_fb1CheckBox_stateChanged(int arg1)
 void MainWindow::on_fb2CheckBox_stateChanged(int arg1)
 {
     if(ui->fb2CheckBox->isChecked())
-        qDebug() << QString("Feedback element 2 is on");
+       qDebug() << QString("Feedback element 2 is on with parameter %1").arg(ui->fb2DSBox->value());
     else
         qDebug() << QString("Feedback element 2 is off");
 }
@@ -226,56 +216,19 @@ void MainWindow::on_fb2CheckBox_stateChanged(int arg1)
 void MainWindow::on_fb3CheckBox_stateChanged(int arg1)
 {
     if(ui->fb3CheckBox->isChecked())
-        qDebug() << QString("Feedback element 3 is on");
+        qDebug() << QString("Feedback element 3 is on with parameter %1").arg(ui->fb3DSBox->value());
     else
         qDebug() << QString("Feedback element 3 is off");
 }
 
 
-void MainWindow::on_probeYUpButton_clicked()
+
+
+void MainWindow::on_showWindowButton_clicked()
 {
-    double value =  ui -> probeYDSBox -> value() +  ui -> probeYDSBox -> singleStep();
-    if(value <= ui-> probeYDSBox->maximum())
-        ui -> probeYDSBox -> setValue(value);
+    diag->show();
 }
 
 
-void MainWindow::on_probeYDownButton_clicked()
-{
-    double value =  ui -> probeYDSBox -> value() -  ui -> probeYDSBox -> singleStep();
-    if(value >= ui-> probeYDSBox->minimum())
-        ui -> probeYDSBox -> setValue(value);
-}
 
-
-void MainWindow::on_probeXUpButton_clicked()
-{
-    double value =  ui -> probeXDSBox -> value() +  ui -> probeXDSBox -> singleStep();
-    if(value <= ui-> probeXDSBox->maximum())
-        ui -> probeXDSBox -> setValue(value);
-}
-
-
-void MainWindow::on_probeXDownButton_clicked()
-{
-    double value =  ui -> probeXDSBox -> value() -  ui -> probeXDSBox -> singleStep();
-    if(value >= ui-> probeXDSBox->minimum())
-        ui -> probeXDSBox -> setValue(value);
-}
-
-
-void MainWindow::on_probeZUpButton_clicked()
-{
-    double value =  ui -> probeZDSBox -> value() +  ui -> probeZDSBox -> singleStep();
-    if(value <= ui-> probeZDSBox->maximum())
-        ui -> probeZDSBox -> setValue(value);
-}
-
-
-void MainWindow::on_probeZDownButton_clicked()
-{
-    double value =  ui -> probeZDSBox -> value() -  ui -> probeZDSBox -> singleStep();
-    if(value >= ui-> probeZDSBox->minimum())
-        ui -> probeZDSBox -> setValue(value);
-}
 

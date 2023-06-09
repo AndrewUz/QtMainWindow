@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "dialog.h"
+#include "probecontroller.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,12 +31,6 @@ private slots:
     void on_rotationBox_valueChanged(double arg1);
 
     void on_resolutionSpinBox_valueChanged(int arg1);
-
-    void on_probeXDSBox_valueChanged(double arg1);
-
-    void on_probeYDSBox_valueChanged(double arg1);
-
-    void on_probeZDSBox_valueChanged(double arg1);
 
     void on_capHeightDSBox_valueChanged(double arg1);
 
@@ -76,20 +72,14 @@ private slots:
 
     void on_fb3CheckBox_stateChanged(int arg1);
 
-    void on_probeYUpButton_clicked();
+    void on_showWindowButton_clicked();
 
-    void on_probeYDownButton_clicked();
 
-    void on_probeXUpButton_clicked();
-
-    void on_probeXDownButton_clicked();
-
-    void on_probeZUpButton_clicked();
-
-    void on_probeZDownButton_clicked();
 
 private:
     Ui::MainWindow *ui;
     bool flirtAddParamsShown;
+    Dialog *diag;
+
 };
 #endif // MAINWINDOW_H

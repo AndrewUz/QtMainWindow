@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1010</width>
-    <height>435</height>
+    <width>1133</width>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>1026</width>
-      <height>441</height>
+      <height>469</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="MainLayout" stretch="0,1">
@@ -144,223 +144,20 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QDoubleSpinBox" name="probeXDSBox">
-           <property name="prefix">
-            <string>X: </string>
-           </property>
-           <property name="suffix">
-            <string> мкм</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDoubleSpinBox" name="probeYDSBox">
-           <property name="prefix">
-            <string>Y: </string>
-           </property>
-           <property name="suffix">
-            <string> мкм</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDoubleSpinBox" name="probeZDSBox">
-           <property name="prefix">
-            <string>Z: </string>
-           </property>
-           <property name="suffix">
-            <string> мкм</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="probeController" name="probeControllerWidget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>215</width>
+           <height>125</height>
+          </size>
+         </property>
+        </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+        <widget class="QPushButton" name="showWindowButton">
+         <property name="text">
+          <string>Показать окно</string>
          </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_2">
-          <item row="1" column="2">
-           <widget class="QPushButton" name="probeYDownButton">
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>downarrow.png</normaloff>downarrow.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QPushButton" name="probeXUpButton">
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>rightarrow.png</normaloff>rightarrow.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QPushButton" name="probeYUpButton">
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>uparrow.png</normaloff>uparrow.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QPushButton" name="probeZUpButton">
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>zuparrow.png</normaloff>zuparrow.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QPushButton" name="probeXDownButton">
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>leftarrow.png</normaloff>leftarrow.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <widget class="QPushButton" name="probeZDownButton">
-            <property name="minimumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="icon">
-             <iconset>
-              <normaloff>zdownarrow.png</normaloff>zdownarrow.png</iconset>
-            </property>
-            <property name="iconSize">
-             <size>
-              <width>50</width>
-              <height>50</height>
-             </size>
-            </property>
-           </widget>
-          </item>
-         </layout>
         </widget>
        </item>
        <item>
@@ -387,7 +184,7 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="AFMTab">
         <attribute name="title">
@@ -398,7 +195,7 @@
           <rect>
            <x>10</x>
            <y>30</y>
-           <width>662</width>
+           <width>724</width>
            <height>271</height>
           </rect>
          </property>
@@ -406,8 +203,17 @@
           <property name="sizeConstraint">
            <enum>QLayout::SetMinimumSize</enum>
           </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
           <property name="topMargin">
            <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
           </property>
           <item>
            <layout class="QVBoxLayout" name="AFMVerticalLayout">
@@ -473,31 +279,38 @@
              </layout>
             </item>
             <item>
-             <widget class="QWidget" name="widget" native="true">
-              <layout class="QVBoxLayout" name="verticalLayout_3">
-               <item>
-                <widget class="QCheckBox" name="fb1CheckBox">
-                 <property name="text">
-                  <string>Обратная связь 1</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="fb2CheckBox">
-                 <property name="text">
-                  <string>Обратная связь 2</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QCheckBox" name="fb3CheckBox">
-                 <property name="text">
-                  <string>Обратная связь 3</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
+             <layout class="QGridLayout" name="fbLayout">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="fb1CheckBox">
+                <property name="text">
+                 <string>Обратная связь 1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QDoubleSpinBox" name="fb1DSBox"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="fb2CheckBox">
+                <property name="text">
+                 <string>Обратная связь 2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDoubleSpinBox" name="fb2DSBox"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="fb3CheckBox">
+                <property name="text">
+                 <string>Обратная связь 3</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QDoubleSpinBox" name="fb3DSBox"/>
+              </item>
+             </layout>
             </item>
             <item>
              <spacer name="verticalSpacer_2">
@@ -537,15 +350,24 @@
            <x>20</x>
            <y>49</y>
            <width>662</width>
-           <height>286</height>
+           <height>293</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="flirtLayout" stretch="0,1">
           <property name="sizeConstraint">
            <enum>QLayout::SetMaximumSize</enum>
           </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
           <property name="topMargin">
            <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
           </property>
           <item>
            <layout class="QVBoxLayout" name="flirtVerticalLayout">
@@ -636,7 +458,7 @@
             <item>
              <widget class="QPushButton" name="flirtShowParams">
               <property name="text">
-               <string>Доп. настройки</string>
+               <string>-&gt; Доп. настройки</string>
               </property>
               <property name="flat">
                <bool>true</bool>
@@ -709,7 +531,7 @@
           <rect>
            <x>10</x>
            <y>70</y>
-           <width>638</width>
+           <width>698</width>
            <height>231</height>
           </rect>
          </property>
@@ -717,8 +539,17 @@
           <property name="sizeConstraint">
            <enum>QLayout::SetMinimumSize</enum>
           </property>
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
           <property name="topMargin">
            <number>15</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
           </property>
           <item>
            <layout class="QVBoxLayout" name="capVerticalLayout">
@@ -876,7 +707,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1010</width>
+     <width>1133</width>
      <height>22</height>
     </rect>
    </property>
@@ -898,7 +729,6 @@
      <addaction name="actionBigFont"/>
     </widget>
     <addaction name="menu_font"/>
-    <addaction name="action_2"/>
    </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_edit"/>
@@ -917,7 +747,7 @@
   </widget>
   <action name="actionStandardFont">
    <property name="checkable">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>Стандартный</string>
@@ -950,6 +780,12 @@
    <class>signalPlot</class>
    <extends>QWidget</extends>
    <header>signalplot.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>probeController</class>
+   <extends>QWidget</extends>
+   <header>probecontroller.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
